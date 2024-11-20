@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart'; // Додано Google Fonts
 
 void main() {
   runApp(MyApp());
@@ -9,8 +10,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-        ),
         body: Center(
           child: AnimatedBackground(),
         ),
@@ -73,17 +72,18 @@ class _AnimatedBackgroundState extends State<AnimatedBackground>
         Center(
           child: Text(
             'Veronika Myshkovska',
-            style: TextStyle(
-              fontSize: 48,
-              fontFamily: 'Arial',
-              color: Colors.white,
-              shadows: [
-                Shadow(
-                  blurRadius: 10,
-                  color: Colors.black.withOpacity(0.5),
-                  offset: Offset(5, 5),
-                ),
-              ],
+            style: GoogleFonts.dotGothic16(
+              textStyle: TextStyle(
+                fontSize: 48,
+                color: Colors.white,
+                shadows: [
+                  Shadow(
+                    blurRadius: 10,
+                    color: Colors.black.withOpacity(0.5),
+                    offset: Offset(5, 5),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
